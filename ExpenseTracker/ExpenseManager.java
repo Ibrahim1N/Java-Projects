@@ -44,7 +44,7 @@ public class ExpenseManager {
     public List<Expense> getExpenses(){
         return expenses;
     }
-    public static void viewSummary(ArrayList<Expense> expenses){
+    public static void viewSummary(List<Expense> expenses){
         double total = 0;
 
         for(Expense e: expenses){
@@ -54,14 +54,14 @@ public class ExpenseManager {
         System.out.println("Summary of all expenses:" + total);
     }
 
-    public static void viewSummary(ArrayList<Expense> expenses, String month){
+    public static void viewMonthSummary(List<Expense> expenses, String month){
         double total =  0;
         for(Expense e : expenses){
             if(e.getDate().substring(5, 7).equals(month)){
                 total += e.getExpenseAmount();
             }
         }
-        System.out.println("Summary of all expenses in " + month + "is: " + total);
+        System.out.println("Summary of all expenses in " + month + " is: " + total);
     }
 
 

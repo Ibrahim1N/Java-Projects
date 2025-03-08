@@ -46,8 +46,9 @@ public class Main {
 
                         break;
                     case 2:
-                        System.out.println("Enter the number of index to edit: ");
+                        System.out.println("Enter the number of expense to edit: ");
                         int index = scanner.nextInt();
+                        scanner.nextLine();
 
                         if(index <=0 || index>expenseManager.getExpenses().size()){
                             System.out.println("Invalid index. Please try again.");
@@ -72,6 +73,31 @@ public class Main {
                         break;
 
                         case 3:
+                            System.out.println("Enter the number of expense to edit: ");
+                            int index1 = scanner.nextInt();
+                            if(index1 <=0 || index1>expenseManager.getExpenses().size()){
+                                System.out.println("Invalid index. Please try again.");
+                                break;
+                            }
+
+                            expenseManager.removeExpense(index1);
+
+                            break;
+
+                        case 4:
+                            System.out.println("Here is all of your expenses: ");
+                            expenseManager.viewAllExpenses();
+                            break;
+
+                        case 5:
+                           
+                            ExpenseManager.viewSummary(expenseManager.getExpenses());
+                            break;
+
+                        case 6:
+                            System.out.println("Enter the month you want to view summary of (MM): ");
+                            String month1 = scanner.nextLine();
+                            ExpenseManager.viewMonthSummary(expenseManager.getExpenses(), month1);
 
 
                 }
