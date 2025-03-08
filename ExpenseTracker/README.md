@@ -1,5 +1,7 @@
 # Expense Tracker
 
+## URL OF THE PROJECT: https://roadmap.sh/projects/expense-tracker
+
 ## Overview
 The **Expense Tracker** is a simple Java console application that allows users to manage their expenses. Users can add, update, remove, and view expenses, as well as get a summary of their expenses for all time or for a specific month.
 
